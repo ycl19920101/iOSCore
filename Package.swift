@@ -13,13 +13,14 @@ let package = Package(
         ),
     ],
     dependencies: [
-        // 外部依赖，例如：
-        // .package(url: "https://github.com/Alamofire/Alamofire.git", from: "5.6.0"),
+        .package(url: "https://github.com/Alamofire/Alamofire.git", from: "5.8.0"),
     ],
     targets: [
         .target(
             name: "iOSCore",
-            dependencies: [],
+            dependencies: [
+                .product(name: "Alamofire", package: "Alamofire")
+            ],
             path: "iOSCore/iOSCore"
         ),
         .testTarget(

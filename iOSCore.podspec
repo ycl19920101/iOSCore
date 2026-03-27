@@ -22,5 +22,5 @@ iOSCore 提供了 iOS 开发中常用的扩展、工具类和 UI 组件。
   # }
 
   # 依赖其他库
-  # s.dependency 'Alamofire', '~> 5.0'
+  s.dependency 'Alamofire', '~> 5.8'
 end
