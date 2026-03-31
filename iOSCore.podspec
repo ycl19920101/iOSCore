@@ -11,7 +11,7 @@ iOSCore 提供了 iOS 开发中常用的扩展、工具类和 UI 组件。
   s.author           = { 'ycl19920101' => 'your@email.com' }
   s.source           = { :git => 'https://github.com/ycl19920101/iOSCore.git', :tag => s.version.to_s }
 
-  s.ios.deployment_target = '12.0'
+  s.ios.deployment_target = '13.0'
   s.swift_version = '5.0'
 
   s.source_files = 'iOSCore/iOSCore/**/*.swift'
