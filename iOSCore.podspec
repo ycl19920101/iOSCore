@@ -13,6 +13,7 @@ iOSCore 提供了 iOS 开发中常用的扩展、工具类和 UI 组件。
 
   s.ios.deployment_target = '13.0'
   s.swift_version = '5.0'
+  s.static_framework = true
 
   s.source_files = 'iOSCore/iOSCore/**/*.swift'
 
