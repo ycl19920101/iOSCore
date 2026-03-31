@@ -194,16 +194,8 @@ public final class NetworkManager {
             request.downloadProgress { progressHandler($0.fractionCompleted) }
         }
 
-        let response = try await request.response
+        let fileURL = try await request.serializingDownloadedFileURL().value
 
-        switch response.result {
-        case .success(let fileURL):
-            guard let fileURL = fileURL else {
-                throw NetworkError.invalidResponse
-            }
-            return fileURL
-        case .failure(let error):
-            throw NetworkError.networkError(error)
-        }
+        return fileURL
     }
 }
