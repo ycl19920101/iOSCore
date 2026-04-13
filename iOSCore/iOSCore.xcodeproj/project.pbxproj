@@ -36,15 +36,11 @@
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		D69EB5C72F762806002A5A75 /* iOSCore */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-			);
 			path = iOSCore;
 			sourceTree = "<group>";
 		};
 		D69EB5D42F762806002A5A75 /* iOSCoreTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-			);
 			path = iOSCoreTests;
 			sourceTree = "<group>";
 		};
@@ -234,9 +230,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-iOSCoreTests/Pods-iOSCoreTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-iOSCoreTests/Pods-iOSCoreTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
