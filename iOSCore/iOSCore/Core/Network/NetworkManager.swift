@@ -19,7 +19,7 @@ public enum NetworkError: Error {
 }
 
 /// 网络请求管理器
-public final class NetworkManager {
+public final class NetworkManager: NetworkPerforming {
 
     public static let shared = NetworkManager()
 
