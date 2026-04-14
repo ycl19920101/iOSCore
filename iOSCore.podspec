@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'iOSCore'
-  s.version          = '0.1.1'
+  s.version          = '1.0.0'
   s.summary          = 'iOS 常用工具库'
   s.description      = <<-DESC
 iOSCore 提供了 iOS 开发中常用的扩展、工具类和 UI 组件。
