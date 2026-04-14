@@ -19,9 +19,12 @@ public enum NetworkError: Error {
 }
 
 /// 网络请求管理器
-public final class NetworkManager {
+public final class NetworkManager: NetworkPerforming {
 
     public static let shared = NetworkManager()
+
+    /// 是否自动附加 BasicSetting 公共参数，默认 true
+    public var attachBasicParameters: Bool = true
 
     private init() {}
 
@@ -102,10 +105,17 @@ public final class NetworkManager {
         parameters: Parameters? = nil,
         headers: HTTPHeaders? = nil
     ) async throws -> Data {
+        var mergedParams: Parameters = attachBasicParameters
+            ? BasicSetting.shared.parameters().mapValues { $0 as Any }
+            : [:]
+        if let parameters = parameters {
+            mergedParams.merge(parameters) { _, new in new }
+        }
+
         let response = try await AF.request(
             url,
             method: method,
-            parameters: parameters,
+            parameters: mergedParams,
             headers: headers
         )
         .validate()
