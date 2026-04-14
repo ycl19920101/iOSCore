@@ -6,7 +6,9 @@
       "mcp__zread__get_repo_structure",
       "mcp__web-search-prime__web_search_prime",
       "mcp__web-reader__webReader",
-      "Bash(pod install:*)"
+      "Bash(pod install:*)",
+      "Bash(xcodebuild build:*)",
+      "Bash(find ~/Library/Developer/Xcode/DerivedData/iOSCore-*/Build -name \"iOSCore.swiftinterface\" -path \"*/arm64/*\")"
     ]
   }
 }

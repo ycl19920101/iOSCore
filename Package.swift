@@ -11,6 +11,10 @@ let package = Package(
             name: "iOSCore",
             targets: ["iOSCore"]
         ),
+        .library(
+            name: "iOSCoreUI",
+            targets: ["iOSCoreUI"]
+        ),
     ],
     dependencies: [
         .package(url: "https://github.com/Alamofire/Alamofire.git", from: "5.8.0"),
@@ -27,11 +31,16 @@ let package = Package(
                 .product(name: "SwiftyBeaver", package: "SwiftyBeaver"),
                 .product(name: "KeychainAccess", package: "KeychainAccess"),
             ],
-            path: "iOSCore/iOSCore"
+            path: "iOSCore/iOSCore/Core"
+        ),
+        .target(
+            name: "iOSCoreUI",
+            dependencies: ["iOSCore"],
+            path: "iOSCore/iOSCore/UI"
         ),
         .testTarget(
             name: "iOSCoreTests",
-            dependencies: ["iOSCore"],
+            dependencies: ["iOSCore", "iOSCoreUI"],
             path: "iOSCore/iOSCoreTests"
         ),
     ]
